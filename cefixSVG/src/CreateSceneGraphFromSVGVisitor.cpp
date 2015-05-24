@@ -159,8 +159,8 @@ void CreateSceneGraphFromSVGVisitor::visit(svg::Path& node)
             return;
         osg::Vec4Array* c = new osg::Vec4Array();
         c->push_back(fill_color);
-        geo->setColorBinding(osg::Geometry::BIND_OVERALL);
         geo->setColorArray(c);
+        geo->setColorBinding(osg::Geometry::BIND_OVERALL);
         
         
         geode->addDrawable(geo);

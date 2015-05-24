@@ -78,9 +78,9 @@ void VectorRenderer2D::Operator::tryToSetColor(Segment& p, unsigned int ndx)
         case osg::Geometry::BIND_PER_PRIMITIVE_SET:
             p.setColor((*colors)[_primitiveSetNdx]);
             break;
-        case osg::Geometry::BIND_PER_PRIMITIVE:
-            p.setColor((*colors)[_primitiveNdx]);
-            break;
+        // case osg::Geometry::BIND_PER_PRIMITIVE:
+        //    p.setColor((*colors)[_primitiveNdx]);
+        //    break;
         default:
             break;
     }

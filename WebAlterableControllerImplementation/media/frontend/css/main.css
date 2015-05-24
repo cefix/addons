@@ -1,0 +1,25 @@
+body {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 30px; }
+  body h1 {
+    margin-bottom: 40px; }
+  body .group {
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 20px; }
+    body .group h2 {
+      margin-top: 0px; }
+    body .group .values .name {
+      width: 100px;
+      display: inline-block; }
+    body .group .values input[type=checkbox] {
+      text-align: right; }
+    body .group ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px; }
+      body .group ul li {
+        margin: 0;
+        padding: 0; }

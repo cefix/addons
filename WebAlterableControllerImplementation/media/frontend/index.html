@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{application_name}}</title>
+        <link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>
+        <script src="js/lib/jquery-1.7.1.min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/backbone.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <h1>{{application_name}}</h1>
+        <div id="app-container">
+            <div class="listing">
+            </div>
+            <button id="refresh">Refresh</button> <button id="dump">Dump</button> 
+            <span class="continuous-update"><input type="checkbox" name="continuous-update" id="continuous-update" value="1"  /> <label for="continuous-update">continuous update</label></span>
+        </div>
+        
+    </body>
+    <script type="text/template" id="group-template">
+      <div class="group">
+        <h2><%=name%></h2>
+        <ul class="alterables">
+        </ul>
+      </div>
+    </script>
+    <script type="text/template" id="alterable-template">
+        <ul class="values">
+        </ul>
+    </script>
+    <script type="text/template" id="value-template">
+    <div id="<%=value.html_id%>-wrapper" class="<%=alterable.representation%>">
+        <span class="name"><%=value.name%></span>
+        <span class="value"><%=value.value%></span>
+    </div>
+    </script>
+    <script type="text/template" id="value-template-text">
+    <div id="<%=value.html_id%>-wrapper" class="<%=alterable.representation%>">
+        <span class="name"><%=value.name%></span>
+        <span class="value"><%=value.value%></span>
+    </div>
+    </script>
+    <script type="text/template" id="value-template-switch">
+    <div id="<%=value.html_id%>-wrapper" class="<%=alterable.representation%>">
+         <input type="checkbox" name="<%=value.html_id%>" id="<%=value.html_id%>" value="1" <% if(value.value) {%>checked="checked"<%} %> >  <span class="name" />
+         <label for="<%=value.html_id%>"><span class="name"><%=value.name%></span></label><%=value.value%>
+    </div>
+    </script>
+    <script type="text/template" id="value-template-button">
+    <div id="<%=value.html_id%>-wrapper" class="<%=alterable.representation%>">
+         <button  name="<%=value.html_id%>"><span class="name"><%=value.name%></span></button>
+    </div>
+    </script>
+    <script type="text/template" id="value-template-value">
+       <div id="<%=value.html_id%>-wrapper" class="<%=alterable.representation%>">
+         <span class="name"><%=value.name%></span>
+         <input type="range" name="<%=value.html_id%>-slider" min="<%=alterable.min_range%>" max="<%=alterable.max_range%>" value="<%=value.value%>" step="0.01" />
+         <input type="text" name="<%=value.html_id%>-text" value="<%=value.value%>"/>
+    </div>
+    </script>
+</html>

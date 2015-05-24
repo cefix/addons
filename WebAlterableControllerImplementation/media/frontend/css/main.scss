@@ -1,0 +1,37 @@
+ body {
+	font-family: Georgia, serif;
+	font-size: 14px;
+	line-height: 150%;
+	padding: 30px;
+	h1 {
+		margin-bottom: 40px;
+	}
+	.group {
+		padding: 10px;
+		background-color: #eee;
+		margin-bottom: 20px;
+
+		h2 {
+			margin-top: 0px;
+		}
+
+		.values {
+			.name {
+				width: 100px;
+				display: inline-block;
+			}
+			input[type=checkbox] {
+				text-align: right;
+			}
+		}
+		ul {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			li {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}	
+ }
